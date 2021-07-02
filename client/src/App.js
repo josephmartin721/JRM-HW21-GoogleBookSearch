@@ -1,10 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import logo from "./logo.svg";
 import { CssBaseline } from "@material-ui/core";
-import Search from "./pages/Search";
-import Nav from "./components/Nav";
-import MainContainer from "./layouts/MainContainer";
+import Search from "./components/pages/Search";
+import Nav from "./components/Nav/Nav";
+import Container from "./layouts/MainContainer";
 
 function App() {
   return (
@@ -12,9 +11,9 @@ function App() {
       <CssBaseline />
       <Router>
         <Nav />
-        <MainContainer>
+        <Container>
           <Route exact path="/" component={Search} />
-        </MainContainer>
+        </Container>
       </Router>
     </React.Fragment>
   );
